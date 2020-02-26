@@ -11,7 +11,7 @@ export default class Splash extends Component {
 
   static navigationOptions =
     {
-      header: null,
+      headerShown: false,
     };
 
   Hide_Splash_Screen = () => {

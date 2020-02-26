@@ -22,8 +22,7 @@ import Screen3 from './Screen3';
  
 //Import Custom Sidebar
  import CustomSidebarMenu from '../../CustomSidebarMenu';
-import DetailsScreen from './pages/DetailScreen';
-import HomeScreen from './pages/HomeScreen';
+
 
 global.currentScreenIndex = 0;
 //Navigation Drawer Structure for all screen
@@ -47,7 +46,6 @@ class NavigationDrawerStructure extends Component {
     );
   }
 }
- 
 //Stack Navigator for the First Option of Navigation Drawer
 const FirstActivity_StackNavigator = createStackNavigator({
   //All the screen from the First Option will be indexed here
@@ -55,7 +53,7 @@ const FirstActivity_StackNavigator = createStackNavigator({
     screen: Screen1,
     navigationOptions: ({ navigation }) => ({
       title: 'HOME',
-      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
+      headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
         backgroundColor: '#FF9800',
       },

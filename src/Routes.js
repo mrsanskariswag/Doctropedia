@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack'
 import { createAppContainer } from 'react-navigation';
 
 import splash from '../src/splash';
-import Navigator from '../src/screens/Drawer';
+import Drawer from '../src/screens/Drawer';
 
 
 // import Login1 from './Pages/login1';
@@ -26,8 +26,8 @@ const AppNavigator = createStackNavigator({
         screen: splash
     
     },
-    Navigator: {
-        screen: Navigator,
+    Drawer: {
+        screen: Drawer,
     },
 
     // Login1: {
