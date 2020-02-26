@@ -5,26 +5,26 @@ import {
   Dimensions,
   Image,
   TouchableOpacity,
-
 } from 'react-native';
+ 
+
 
 import {createAppContainer} from 'react-navigation';
 import {createDrawerNavigator} from 'react-navigation-drawer';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
  
 //Import all the screens
 import Screen1 from './Screen1';
 import Screen2 from './Screen2';
 import Screen3 from './Screen3';
-import splash from '../splash';
+//import splash from '../splash';
  
 //Import Custom Sidebar
-// import CustomSidebarMenu from '..CustomSidebarMenu';
  import CustomSidebarMenu from '../../CustomSidebarMenu';
-import HomeScreen from './pages/HomeScreen';
 import DetailsScreen from './pages/DetailScreen';
-import SettingsScreen from './pages/SettingScreen';
-import ProfileScreen from './pages/ProfileScreen';
+import HomeScreen from './pages/HomeScreen';
+
 global.currentScreenIndex = 0;
 //Navigation Drawer Structure for all screen
 class NavigationDrawerStructure extends Component {
@@ -54,7 +54,7 @@ const FirstActivity_StackNavigator = createStackNavigator({
   First: {
     screen: Screen1,
     navigationOptions: ({ navigation }) => ({
-      title: 'Demo Screen 1',
+      title: 'HOME',
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
         backgroundColor: '#FF9800',
@@ -70,7 +70,7 @@ const Screen2_StackNavigator = createStackNavigator({
   Second: {
     screen: Screen2,
     navigationOptions: ({ navigation }) => ({
-      title: 'Demo Screen 2',
+      title: 'jhbhacc',
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
  
       headerStyle: {
@@ -87,7 +87,7 @@ const Screen3_StackNavigator = createStackNavigator({
   Third: {
     screen: Screen3,
     navigationOptions: ({ navigation }) => ({
-      title: 'Demo Screen 3',
+      title: 'About Us',
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
         backgroundColor: '#FF9800',
@@ -127,101 +127,6 @@ const DrawerN = createDrawerNavigator(
     drawerWidth: Dimensions.get('window').width - 130,
   }
 );
-
-// Buttom navigation 
-const HomeStack = createStackNavigator(
-  {
-    //Defination of Navigaton from home screen
-    Home: {
-       screen: HomeScreen
-      },
-
-    Details: {
-       screen: DetailsScreen
-      },
-  },
-  {
-    defaultNavigationOptions: {
-      //Header customization of the perticular Screen
-      headerStyle: {
-        backgroundColor: '#42f44b',
-      },
-      headerTintColor: '#FFFFFF',
-      title: 'Home',
-      //Header title
-    },
-  }
-);
- 
-const SettingsStack = createStackNavigator(
-  {
-    //Defination of Navigaton from setting screen
-    Settings: { screen: SettingsScreen },
-    Details: { screen: DetailsScreen },
-    Profile: { screen: ProfileScreen },
-  },
-  {
-    defaultNavigationOptions: {
-      //Header customization of the perticular Screen
-      headerStyle: {
-        backgroundColor: '#42f44b',
-      },
-      headerTintColor: '#FFFFFF',
-      title: 'Settings',
-      //Header title
-    },
-  }
-);
- 
-const App = createBottomTabNavigator({
-    //Defination of Navigaton bottom options
-    Home: { screen: HomeScreen},
-    Settings: { screen: SettingsScreen },
-  },
-  {
-    defaultNavigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused, horizontal, tintColor }) => {
-        const { routeName } = navigation.state;
-        if (routeName === 'Home') {
-          return (
-            <Image
-              source={
-                focused
-                  ? require('../images/logo1.png')
-                  : require('../images/logo2.png')
-              }
-              style={{
-                width: 20,
-                height: 20,
-                borderRadius: 40 / 2,
-              }}
-            />
-          );
-        } else if (routeName === 'Settings') {
-          return (
-            <Image
-              source={
-                focused
-                  ? require('../images/logo1.png')
-                  : require('../images/logo4.png')
-              }
-              style={{
-                width: 20,
-                height: 20,
-                borderRadius: 40 / 2,
-              }}
-            />
-          );
-        }
-      },
-    }),
-    tabBarOptions: {
-      activeTintColor: '#42f44b',
-      inactiveTintColor: 'gray',
-    },
-  }
-);
-// end buttom
 const Appcontainer=createAppContainer(DrawerN);
 export default class Drawer extends Component {
   render(){

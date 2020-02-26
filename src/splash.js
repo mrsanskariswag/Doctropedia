@@ -23,15 +23,15 @@ export default class Splash extends Component {
   componentDidMount() {
     var that = this;
     // setTimeout(() => {this.props.navigation.navigate("TabNavigator")}, 100);
-    setTimeout(() => {this.props.navigation.navigate("Navigator")}, 100);
+    setTimeout(() => {this.props.navigation.navigate("Navigator")}, 5000);
   }
   
   render() {
     let Splash_Screen = (
       <View style={styles.SplashScreen_RootView}>
         <View style={styles.SplashScreen_ChildView}>
-          <Image source={require('./images/logo.jpg')}
-            style={{ width: '100%', height: '100%', resizeMode: 'contain' }} />
+          <Image source={require('./images/logo.png')}
+            style={{ width: 320, height: 180, resizeMode: 'contain' }} />
         </View>
       </View>)
       

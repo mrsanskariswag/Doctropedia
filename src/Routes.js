@@ -5,6 +5,8 @@ import { createAppContainer } from 'react-navigation';
 
 import splash from '../src/splash';
 import Navigator from '../src/screens/Drawer';
+
+
 // import Login1 from './Pages/login1';
 // import Login from './Users/login';
 // import Signup from './Users/signup'
@@ -22,6 +24,7 @@ const AppNavigator = createStackNavigator({
 
     Splash: {
         screen: splash
+    
     },
     Navigator: {
         screen: Navigator,
@@ -34,7 +37,7 @@ const AppNavigator = createStackNavigator({
     //     screen: Login,
     // },
     // Signup: {
-    //     screen: Signup,
+    //     screen: SignUp,
     // },
     // Profile:
     // {
