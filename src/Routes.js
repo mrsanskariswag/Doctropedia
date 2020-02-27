@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack'
 import { createAppContainer } from 'react-navigation';
 
 import splash from '../src/splash';
-import Drawer from '../src/screens/Drawer';
+import Navigator from '../src/screens/Drawer';
 
 
 // import Login1 from './Pages/login1';
@@ -17,7 +17,7 @@ import Drawer from '../src/screens/Drawer';
 
 export default class Routes extends Component {
     render() {
-        return <AppContainer />;
+        return <AppContainer/>;
     }
 }
 const AppNavigator = createStackNavigator({
@@ -26,8 +26,8 @@ const AppNavigator = createStackNavigator({
         screen: splash
     
     },
-    Drawer: {
-        screen: Drawer,
+    Navigator: {
+        screen: Navigator,
     },
 
     // Login1: {

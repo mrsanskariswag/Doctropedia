@@ -55,7 +55,7 @@ const FirstActivity_StackNavigator = createStackNavigator({
       title: 'HOME',
       headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#0091EA',
       },
       headerTintColor: '#fff',
     }),
@@ -72,7 +72,7 @@ const Screen2_StackNavigator = createStackNavigator({
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
  
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#0091EA',
       },
       headerTintColor: '#fff',
     }),
@@ -88,7 +88,7 @@ const Screen3_StackNavigator = createStackNavigator({
       title: 'About Us',
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#0091EA',
       },
       headerTintColor: '#fff',
     }),

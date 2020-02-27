@@ -11,7 +11,7 @@ export default class Splash extends Component {
 
   static navigationOptions =
     {
-      headerShown: false,
+      headerShown: false ,
     };
 
   Hide_Splash_Screen = () => {
@@ -23,7 +23,7 @@ export default class Splash extends Component {
   componentDidMount() {
     var that = this;
     // setTimeout(() => {this.props.navigation.navigate("TabNavigator")}, 100);
-    setTimeout(() => {this.props.navigation.navigate("Navigator")}, 5000);
+    setTimeout(() => {this.props.navigation.navigate("Navigator")}, 500);
   }
   
   render() {

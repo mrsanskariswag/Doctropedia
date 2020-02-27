@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
+import { createAppContainer, StackNavigator  } from 'react-navigation'; 
 import {StyleSheet, View, Text, Image } from 'react-native';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import { createAppContainer, } from 'react-navigation'; 
+
 
 
 import Home_Activity from '../screens/pages/Home_Activity';
@@ -77,7 +78,7 @@ const MainApp = createBottomTabNavigator(
 );
  
  
-// export default createAppContainer(MainApp);
+export default createAppContainer(MainApp);
 // import React, { Component } from 'react';
 // //import react in our code.
 // import { StyleSheet, View, Text } from 'react-native';
